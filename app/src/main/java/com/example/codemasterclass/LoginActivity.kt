@@ -9,15 +9,15 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 
-class LoginActivity : ComponentActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        /*
+
         //hide title bar
-        getSupportActionBar()?.hide()
-        */
+        actionBar?.hide()
+
 
 
         //instance text
@@ -35,12 +35,12 @@ class LoginActivity : ComponentActivity() {
 
         //event button login
         btnLogin.setOnClickListener {
-            val intentLogin = Intent(this, RegisterActivity::class.java)
+            val intentLogin = Intent(this, MainActivity::class.java)
             startActivity(intentLogin)
 
             //object class databaseHelper
             val databaseHelper = DatabaseHelper (this)
-
+            /*
             //check data
             val data:String = databaseHelper.checkData("sherly@amikom.ac.id")
             Toast.makeText(this@LoginActivity, "Result : " + data,
@@ -53,7 +53,7 @@ class LoginActivity : ComponentActivity() {
             //instance databasehelper
             val dbHelper = DatabaseHelper(this)
             dbHelper.addAcount("sherly@amikom.ac.id", "Sherly Marsaraina Dabit", "12345")
-
+            */
             val username = txtUsername.text.toString().trim()
             val password = txtPassword.text.toString().trim()
 

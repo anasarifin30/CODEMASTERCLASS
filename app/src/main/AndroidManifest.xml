@@ -13,18 +13,17 @@
         android:theme="@style/Theme.CODEMASTERCLASS"
         tools:targetApi="31">
         <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
             android:name=".MateriUIActivity"
             android:exported="false" />
         <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.CODEMASTERCLASS">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
